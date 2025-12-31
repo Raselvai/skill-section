@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+button:focus, input:focus, textarea:focus {
+	outline: 0;
+}
+
+body {
+	font-family: "Space Grotesk", sans-serif;
+}
+
+.container {
+	max-width: 1200px !important;
+}
+
+.skill_wrapper {
+	padding: 80px 0;
+}
+
+.skill_wrapper figure {
+	margin: 0 !important;
+	position: relative;
+}
+
+.skill_wrapper figure .overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgb(0 0 0 / 35%);
+}
+
+.skill_wrapper figure a {
+    width: 70px;
+    height: 70px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: 0.4s all ease-in-out;
+}
+
+.skill_wrapper figure a:hover {
+	background: red;
+	color: #ffffff;
+}
+
+.skill_wrapper figure a:hover::before,
+.skill_wrapper figure a:hover::after {
+	border: 1px solid red !important;
+}
+
+.skill_wrapper figure a::before,
+.skill_wrapper figure a::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #cccccc;
+	animation-name: popupBtn;
+	animation-duration: 1.8s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
+
+.skill_wrapper figure a::before {
+	animation-duration: 0.9s !important;
+}
+
+@keyframes popupBtn {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.6);
+		opacity: 0.3;
+	}
+	100% {
+		transform: scale(2.2);
+		opacity: 0;
+	}
+}
+
+.skill_wrapper .skill_content {
+	padding-left: 40px;
+}
+
+.skill_wrapper .skill_content h2 {
+    font-size: 45px;
+    font-weight: 700;
+}
+
+.skill_wrapper .skill_content h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-top: 45px;
+}
+
+.skill_wrapper .skill_content .progress {
+    height: 10px !important;
+    border-radius: 4px !important;
+}
+
+.skill_wrapper .skill_content .progress-bar {
+	background: red !important;
+	font-size: 8px;
+}
+
+
+
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1199px) { 
+	.skill_wrapper .skill_content {
+		padding-left: 0 !important;
+	}
+
+}
+
+@media (max-width: 991px) {
+	.skill_wrapper .skill_content {
+		padding-top: 50px !important;
+	}
+
+}
+
+/*Medium devices (tablets, 767px and down)*/
+@media (max-width: 767px) {
+		
+}
+
+/*Small devices (landscape phones, 575px and down)*/
+@media (max-width: 575px) {
+	.skill_wrapper .skill_content h2 {
+	    font-size: 30px;
+	}
+}
